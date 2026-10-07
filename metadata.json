@@ -1,0 +1,8 @@
+{
+  "name": "Q-FraudX",
+  "description": "Quantum Fraud Intelligence — Premium quantum-enhanced financial fraud analysis platform with live 3D quantum visualization and real FastAPI integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

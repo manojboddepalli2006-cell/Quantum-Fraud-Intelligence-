@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-cream-50: #FFFDF9;
+  --color-cream-100: #FFF9F0;
+  --color-cream-200: #FBF4EA;
+  --color-biscuit-100: #F9F0E3;
+  --color-biscuit-200: #F6EBDD;
+  --color-biscuit-300: #E8D2B5;
+  --color-biscuit-400: #DCC09B;
+  --color-caramel-500: #C5A46D;
+  --color-caramel-600: #B98252;
+  --color-coffee-700: #8B6245;
+  --color-chocolate-800: #4A3024;
+  --color-chocolate-900: #2E1E18;
+
+  --color-gold-muted: #C5A46D;
+  --color-gold-bright: #DFB878;
+  --color-gold-glow: rgba(197, 164, 109, 0.25);
+  
+  --color-alert-red: #B83A2E;
+  --color-alert-red-soft: #F9ECE9;
+  --color-nominal-green: #3D7A5A;
+  --color-nominal-green-soft: #EDF5F0;
+}
+
+@layer base {
+  *, ::before, ::after {
+    border-color: #E8D2B5;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: #FFF9F0;
+    color: #2E1E18;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #E8D2B5;
+    color: #2E1E18;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid #B98252;
+    outline-offset: 2px;
+  }
+
+  /* Custom Warm Biscuit Scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F6EBDD;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #DCC09B;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B98252;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
